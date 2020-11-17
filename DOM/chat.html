@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Chat</title>
+    <style type="text/css">
+        .kotak{
+            border-style: solid;
+            border-radius: 15px;
+            width: 90%;
+            height: 580px;
+            margin: auto;
+            border: 10px solid #000000;
+            background-image: url('8.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .tables{
+            padding-top: 400px;
+            padding-left: 20px;
+        }
+
+        #tampilan{
+            height: 100px;
+            padding-left: 20px;
+            font-size: 40px;
+            font-family: sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        button{
+            height: 40px;
+            width: 70px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kotak">
+        <div id="tampilan">Hai</div>
+        <table>
+            <tr>
+                <td class="tables">
+                    <input type="text" name="chat" id="chat" size="150px" style="height: 30px;">
+                </td>
+                <td class="tables">
+                    <button id="kirim" onclick="pesan()">kirim</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+
+        function pesan() {
+            
+            let satu = document.getElementById('chat');
+            let dua  = document.getElementById('tampilan');
+            let tiga = document.getElementById('kirim');
+
+            dua.innerHTML = dua.innerHTML + "<br>" + satu.value;
+            satu.value =""; 
+        }
+
+    </script>
+
+</body>
+</html>
